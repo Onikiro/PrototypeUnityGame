@@ -39,7 +39,6 @@ public class GameProcessHandler : MonoBehaviour {
     /// <summary>
     /// Время задержки между появлением точек на экране
     /// </summary>
-    [SerializeField]
     float secondsDelay;
     /// <summary>
     /// Количество прав на ошибку игрока.
@@ -136,7 +135,7 @@ public class GameProcessHandler : MonoBehaviour {
     /// </summary>
     void IncreaseComplexity()
     {
-        //if (CountOfWonRounds % 2 == 0)
+        if (CountOfWonRounds % 2 == 0)
         {
             countOfDotsInPath++;
 
@@ -145,10 +144,15 @@ public class GameProcessHandler : MonoBehaviour {
             {
                 secondsDelay -= 0.1f;
             }
-            else 
+            else if(secondsDelay >= 0.2)
             {
                 secondsDelay -= 0.05f;
             }
+            else
+            {
+                secondsDelay = 0.1f;
+            }
+
         }
     }
 

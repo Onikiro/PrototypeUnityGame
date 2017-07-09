@@ -9,7 +9,8 @@ public class CollisionHandler : MonoBehaviour {
     /// <summary>
     /// Камера, с которой будет начинаться raycast
     /// </summary>
-    public Camera cam;
+    [SerializeField]
+    Camera cam;
 
     /// <summary>
     /// Путь, который проходит игрок.

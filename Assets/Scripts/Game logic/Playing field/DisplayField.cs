@@ -8,7 +8,6 @@ public class DisplayField : MonoBehaviour {
 
     public bool IsDisplayFinished { get; set; }
 
-
     /// <summary>
     /// Корутина отрисовки пути на игровом поле.
     /// </summary>
